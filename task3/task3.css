@@ -1,0 +1,166 @@
+.inputs-container{
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 10px;
+  }
+  
+  /* input elements (input boxes, dropdowns, button) */
+  .inputs{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: var(--smallHeading);
+  }
+  
+  /* input fields and select dropdowns */
+  .input-field , .dropdown {
+    padding: 5px 10px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    box-shadow: 0px 0px 5px grey;
+  }
+  
+  .dropdown, #convert-btn, footer a{
+    cursor: pointer;
+  }
+  
+  /* dropdown container */
+  .dropdown-container{
+    position: relative;
+  }
+  
+  .dropdown-container::after{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--smallHeading);
+    color: rgb(66, 61, 30);
+    content: "\25bc";
+    pointer-events: none;
+  }
+  
+  /* dropdown */
+  .dropdown{
+    appearance: none;
+  }
+  
+  /* clickable input field */
+  #input-box{
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px grey, inset 0px 0px 0px gold;
+  }
+  
+  #input-box:focus{
+    box-shadow: 0px 0px 5px grey, inset 0px -4px 1px gold;
+  }
+  
+  /* disabled input field */
+  #result-box{
+    background-color: rgb(255, 252, 207);
+  }
+  
+  /* button */
+  #convert-btn{
+    margin: 10px 0px;
+    padding: 10px;
+    color: var(--lightColor);
+    background-color: orange;
+    box-shadow: 0px 0px 4px darkgoldenrod;
+  }
+  
+  #convert-btn:hover{
+    background-color: gold;
+  }
+  
+  #convert-btn:active{
+    background-color: orange;
+  }
+  
+  /* footer section */
+  footer{
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--darkColor);
+    text-align: center;
+    padding: 15px 0px;
+  }
+  
+  /* footer link */
+  footer a{
+    text-decoration: none;
+    color: beige;
+  }
+  
+  footer a:hover{
+    color: rgb(217, 255, 0);
+  }
+  
+  
+  /* For large mobile devices */
+  @media(min-width: 481px){
+  
+    #content-container{
+      width: 360px;
+      padding: 25px 30px;
+    }
+  
+    #calculations-container{
+      padding: 20px 30px;
+    }
+  
+    .input-field , .dropdown {
+      padding: 7px 10px;
+  }
+  }
+  
+  /* For tablet devices */
+  @media(min-width: 768px){
+  
+    :root{
+      --largeHeading: 1.6rem;
+      --smallHeading: 1.1rem;
+    }
+  
+    #content-container{
+      width: 480px;
+      padding: 35px;
+    }
+  
+    #container-heading{
+      margin: 0px auto 25px auto;
+    }
+  
+    #calculation-container{
+      padding: 15px 40px;
+    }
+  
+    .division-heading::before{
+      width: 100px;
+      height: 1.7px;
+    }
+    
+    .division-heading::after{
+      width: 100px;
+      height: 1.7px;
+    }
+    
+  
+    .inputs-container{
+      display: grid;
+      grid-template-columns: 45% 45%;
+      justify-content: space-between;
+    }
+  
+    .inputs{
+      font-weight: 550;
+    }
+  
+    footer{
+      font-size: 16px;
+    }
+   }
